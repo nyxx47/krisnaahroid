@@ -74,7 +74,7 @@
             :perPageCustom="[[320, 1],[414, 1],[768, 2], [1024, 10]]"
             :autoplay="true"
             :loop="true"
-            :speed="500"
+            :speed="3000"
             :autoplayTimeout="5000"
             :scrollPerPage="true"
             :paginationEnabled="false"
@@ -116,7 +116,12 @@
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/l_docker.svg" alt="adobe xd" />
+                <img src="~assets/images/vue.svg" alt="adobe xd" />
+              </div>
+            </slide>
+            <slide>
+              <div class="image">
+                <img src="~assets/images/nuxt.svg" alt="adobe xd" />
               </div>
             </slide>
             <slide>
@@ -127,6 +132,21 @@
             <slide>
               <div class="image">
                 <img src="~assets/images/XcodeIcon_2x.svg" alt="adobe xd" />
+              </div>
+            </slide>
+            <slide>
+              <div class="image">
+                <img src="~assets/images/github.svg" alt="adobe xd" />
+              </div>
+            </slide>
+            <slide>
+              <div class="image">
+                <img src="~assets/images/gitlab.svg" alt="adobe xd" />
+              </div>
+            </slide>
+            <slide>
+              <div class="image">
+                <img src="~assets/images/bitbucket.svg" alt="adobe xd" />
               </div>
             </slide>
           </carousel>
@@ -204,7 +224,9 @@
             <br />
             <br />I’m an enthusiastic UI/UX Designer & App
             <br />Developer, You can find my recent projects on
-            <br />Dribbble and Instagram or if you’re interested in
+            <br />
+            <a href="#">Dribbble</a> and
+            <a href="#">Instagram</a> or if you’re interested in
             <br />my Design and if you are want to development
             <br />an application, let me know.
           </p>
@@ -216,6 +238,62 @@
         </div>
         <div class="gallery">
           <img src="~assets/images/gallery.png" alt="gallery" />
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="title">
+        <h1>Contact Me</h1>
+      </div>
+      <div class="content-wrap">
+        <div class="content">
+          <div class="greeting">
+            <h1>Say, Hello!</h1>
+          </div>
+          <div class="email-address">
+            <h2>ahroidlife@gmail.com</h2>
+          </div>
+          <div class="message">
+            <a href="#">
+              <div class="button-message">
+                <img src="~assets/images/whatsapp.svg" alt srcset />
+                <span>Message</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="content">
+        <div class="navigation">
+          <ul class="tabs">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Why Me?</a>
+            </li>
+            <li>
+              <a href="#">Portofolio</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="socials">
+          <ul class="social">
+            <li>
+              <a href="#">IN</a>
+            </li>
+            <li>
+              <a href="#">IG</a>
+            </li>
+            <li>
+              <a href="#">FB</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -598,6 +676,11 @@ export default {
           font-size: 14px;
           line-height: 18px;
           color: #64637b;
+
+          a {
+            color: #3838f8;
+            text-decoration: none;
+          }
         }
       }
 
@@ -605,6 +688,152 @@ export default {
         position: absolute;
         right: 20%;
         bottom: 2%;
+      }
+    }
+  }
+
+  #contact {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .title {
+      margin-top: 50px;
+      h1 {
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        color: #64637b;
+      }
+    }
+
+    .content-wrap {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+      background-image: url("~assets/images/square-dots.svg");
+      background-repeat: no-repeat;
+      background-position: 10% 80%;
+      .content {
+        background: #3838f8;
+        box-shadow: 0px 8px 20px rgba(56, 56, 248, 0.3);
+        width: 900px;
+        min-height: 165px;
+        border-radius: 10px 10px 40px 10px;
+        background-image: url("~assets/images/art-contact.svg");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+
+        .greeting {
+          h1 {
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            color: #ffffff;
+          }
+        }
+
+        .email-address {
+          h2 {
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: #ffffff;
+          }
+        }
+
+        .message {
+          a {
+            text-decoration: none;
+          }
+          .button-message {
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: #64637b;
+            background: #ffffff;
+            padding: 8px 22px 8px 22px;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            img {
+              position: relative;
+              top: 2px;
+              right: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .navigation {
+        ul.tabs {
+          padding: 0 !important;
+          li {
+            display: inline;
+            margin-left: 24px;
+            margin-right: 24px;
+
+            a {
+              text-decoration: none;
+              font-family: "Nunito", sans-serif;
+              font-size: 18px;
+              font-weight: 300;
+              color: #64637b;
+            }
+          }
+        }
+      }
+
+      .socials {
+        margin-top: 50px;
+        ul.social {
+          margin-left: -30px;
+          li {
+            display: inline;
+            margin-left: 14px;
+            margin-right: 14px;
+            font-family: "Nunito", sans-serif;
+            font-weight: 400;
+            color: #3838f8;
+            font-size: 14px;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 4px 5px 4px 5px;
+            border-radius: 4px;
+
+            &:nth-child(2) {
+              border: 1px solid #3838f8;
+              box-shadow: 0px 4px 8px rgba(56, 56, 248, 0.2);
+            }
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   }
