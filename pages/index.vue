@@ -10,6 +10,10 @@
       </div>
       <div class="navigation">
         <div class="content">
+          <div class="menu">
+            <div></div>
+            <div></div>
+          </div>
           <ul class="tabs">
             <li>
               <a href="#">Why Me?</a>
@@ -37,6 +41,9 @@
         </div>
       </div>
       <div class="content-wrapper">
+        <div class="button-arrow-mobile">
+          <img src="~assets/images/arrow-down.svg" alt="arrow down" />
+        </div>
         <div class="content">
           <div class="inner">
             <div class="wrap">
@@ -51,16 +58,18 @@
               <div class="btn-content">
                 <a href="#" class="active-button">HIRE ME</a>
               </div>
-              <div class="btn-content">Contact</div>
+              <div class="btn-content">Contact Me</div>
             </div>
           </div>
         </div>
         <div class="content profile">
           <img
+            v-if="isImageHero"
             src="~/assets/images/profile-hero.png"
             class="profile-hero"
             alt="krisna ahroid freelancer"
           />
+          <img v-else src="~assets/images/profile-mobile-hero.svg" alt srcset />
         </div>
       </div>
     </section>
@@ -302,7 +311,21 @@
 
 <script>
 export default {
-  name: "homepage"
+  name: "homepage",
+  data() {
+    return {
+      isImageHero: true
+    };
+  },
+  mounted() {
+    let screenWidth = window.innerWidth;
+    console.log("Screen width is ", screenWidth);
+
+    if (screenWidth < 720) {
+      this.isImageHero = false;
+      console.log(this.isImageHero);
+    }
+  }
 };
 </script>
 
@@ -310,6 +333,9 @@ export default {
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
+
+$width-name: max-device-width;
+$target-width: 375px;
 
 .container {
   #hero-section {
@@ -320,15 +346,29 @@ export default {
     background-position: right top;
     position: relative;
 
+    @media screen and ($width-name: $target-width) {
+      background-image: url("~assets/images/art-hero-mobile.svg");
+      background-size: contain;
+      min-height: 100vh;
+    }
+
     .image-dot-square {
       position: absolute;
       bottom: 0;
+
+      @media screen and ($width-name: $target-width) {
+        display: none;
+      }
     }
 
     .dots {
       position: absolute;
       bottom: 3%;
       left: 25%;
+
+      @media screen and ($width-name: $target-width) {
+        display: none;
+      }
 
       div {
         width: 40px;
@@ -355,8 +395,39 @@ export default {
       justify-content: space-around;
       align-items: flex-end;
 
+      @media screen and ($width-name: $target-width) {
+        min-height: 55px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
       .content {
         flex: 1;
+
+        .menu {
+          display: none;
+
+          div {
+            &:nth-child(1) {
+              width: 35px;
+              height: 4px;
+              background-color: #ffffff;
+              border-radius: 2px;
+              margin-bottom: 8px;
+            }
+
+            &:nth-child(2) {
+              width: 15px;
+              height: 4px;
+              background-color: #ffffff;
+              border-radius: 2px;
+            }
+          }
+
+          @media screen and ($width-name: $target-width) {
+            display: inline-block;
+          }
+        }
 
         ul.tabs {
           padding: 0 !important;
@@ -372,10 +443,22 @@ export default {
               color: #64637b;
             }
           }
+
+          @media screen and ($width-name: $target-width) {
+            display: none;
+          }
         }
 
         ul.social {
           margin-left: -30px;
+
+          @media screen and ($width-name: $target-width) {
+            margin-left: 0;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            top: 4px;
+          }
           li {
             display: inline;
             margin-left: 14px;
@@ -392,10 +475,29 @@ export default {
             &:nth-child(3) {
               border: 1px solid #3838f8;
               box-shadow: 0px 4px 8px rgba(56, 56, 248, 0.2);
+
+              @media screen and ($width-name: $target-width) {
+                background: #ffffff;
+
+                a {
+                  color: #3838f8;
+                }
+              }
             }
 
             a {
               text-decoration: none;
+
+              @media screen and ($width-name: $target-width) {
+                color: #ffffff;
+              }
+            }
+
+            @media screen and ($width-name: $target-width) {
+              margin-left: 8px;
+              margin-right: 8px;
+              background: none;
+              font-size: 12px;
             }
           }
         }
@@ -409,9 +511,42 @@ export default {
       align-items: center;
       width: 90%;
       margin: 0 auto;
+      position: relative;
+
+      .button-arrow-mobile {
+        display: none;
+
+        @media screen and ($width-name: $target-width) {
+          display: inline-block;
+          background: #6868f5;
+          position: absolute;
+          z-index: 100;
+          right: 0;
+          bottom: 5%;
+          width: 36px;
+          height: 36px;
+          border-radius: 50px;
+          border: 1px solid #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      @media screen and ($width-name: $target-width) {
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+      }
 
       .content {
         flex: 1;
+        @media screen and ($width-name: $target-width) {
+          width: 100%;
+        }
         .profile-hero {
           width: 90%;
           margin-left: -25px;
@@ -427,6 +562,13 @@ export default {
               margin-top: -50px;
               margin-bottom: 34px;
               color: #3838f8;
+
+              @media screen and ($width-name: $target-width) {
+                margin-top: 70px;
+                margin-bottom: 50px;
+                color: #ffffff;
+                font-size: 14px;
+              }
             }
 
             h1 {
@@ -434,6 +576,11 @@ export default {
               font-weight: 700;
               font-size: 28px;
               color: #3838f8;
+
+              @media screen and ($width-name: $target-width) {
+                color: #ffffff;
+                font-size: 24px;
+              }
             }
 
             h2 {
@@ -441,6 +588,12 @@ export default {
               font-weight: 500;
               font-size: 18px;
               color: #64637b;
+
+              @media screen and ($width-name: $target-width) {
+                color: #ffffff;
+                font-size: 15px;
+                width: 80%;
+              }
 
               span {
                 font-family: "Nunito", sans-serif;
@@ -453,8 +606,19 @@ export default {
         .bottom {
           display: flex;
           margin-top: 80px;
+
+          @media screen and ($width-name: $target-width) {
+            margin-top: 50px;
+          }
           .btn-content {
             margin-right: 50px;
+            @media screen and ($width-name: $target-width) {
+              color: #ffffff;
+              font-family: "Nunito", sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              margin-right: 40px;
+            }
             .active-button {
               background: #3838f8;
               padding: 8px 30px 8px 30px;
@@ -466,11 +630,39 @@ export default {
               text-decoration: none;
               transition: 0.3s ease;
 
+              @media screen and ($width-name: $target-width) {
+                border: 1px solid #ffffff;
+                border-radius: 2px 8px 2px 8px;
+                font-weight: 600;
+                font-size: 12px;
+                padding: 6px 20px 6px 20px;
+              }
+
               &:hover {
                 box-shadow: 0px 8px 20px rgba(56, 56, 248, 0.2);
                 border-radius: 3px;
+
+                @media screen and ($width-name: $target-width) {
+                  border-radius: 2px;
+                }
               }
             }
+          }
+        }
+      }
+
+      .profile {
+        @media screen and ($width-name: $target-width) {
+          display: flex;
+          justify-content: flex-start;
+          position: relative;
+          top: 100px;
+          left: -40px;
+        }
+
+        img {
+          @media screen and ($width-name: $target-width) {
+            width: 100%;
           }
         }
       }
