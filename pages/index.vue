@@ -80,7 +80,7 @@
       <div class="content">
         <no-ssr>
           <carousel
-            :perPageCustom="[[320, 1],[414, 1],[768, 2], [1024, 10]]"
+            :perPageCustom="[[320, 3],[414, 3],[768, 8], [1024, 10]]"
             :autoplay="true"
             :loop="true"
             :speed="3000"
@@ -171,7 +171,7 @@
           <span>&</span> IOS Developer.
         </p>
       </div>
-      <div class="content-cards">
+      <div v-if="isSpecializing" class="content-cards">
         <img class="square-dots" src="~assets/images/square-dots.svg" alt="dots" />
         <div class="card">
           <div class="line line1"></div>
@@ -218,6 +218,69 @@
             <h2>Know more</h2>
           </div>
         </div>
+      </div>
+      <div v-else class="content-cards card-mobile">
+        <img class="square-dots" src="~assets/images/square-dots.svg" alt="dots" />
+        <no-ssr>
+          <carousel
+            :perPageCustom="[[320, 1],[414, 1],[768, 8], [1024, 10]]"
+            :paginationEnabled="false"
+            :scrollPerPage="true"
+            class="carousel"
+          >
+            <slide>
+              <div class="card">
+                <div class="line line1"></div>
+                <div class="title">
+                  <h1>
+                    Grapics
+                    <br />Design.
+                  </h1>
+                </div>
+                <div class="content">
+                  <p>You can focus on a task by displaying only what you need.</p>
+                </div>
+                <div class="more">
+                  <h2>Know more</h2>
+                </div>
+              </div>
+            </slide>
+            <slide>
+              <div class="card">
+                <div class="line line2"></div>
+                <div class="title">
+                  <h1>
+                    UI/UX
+                    <br />Design
+                  </h1>
+                </div>
+                <div class="content">
+                  <p>You can focus on a task by displaying only what you need.</p>
+                </div>
+                <div class="more">
+                  <h2>Know more</h2>
+                </div>
+              </div>
+            </slide>
+            <slide>
+              <div class="card">
+                <div class="line line3"></div>
+                <div class="title">
+                  <h1>
+                    Apps
+                    <br />Development
+                  </h1>
+                </div>
+                <div class="content">
+                  <p>You can focus on a task by displaying only what you need.</p>
+                </div>
+                <div class="more">
+                  <h2>Know more</h2>
+                </div>
+              </div>
+            </slide>
+          </carousel>
+        </no-ssr>
       </div>
     </section>
     <section id="add-value-section">
@@ -276,10 +339,21 @@
     <section id="footer">
       <div class="content">
         <div class="navigation">
-          <ul class="tabs">
+          <ul v-if="isNavTitle" class="tabs">
             <li>
               <a href="#">Home</a>
             </li>
+            <li>
+              <a href="#">Why Me?</a>
+            </li>
+            <li>
+              <a href="#">Portofolio</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <ul v-else class="tabs">
             <li>
               <a href="#">Why Me?</a>
             </li>
@@ -314,7 +388,9 @@ export default {
   name: "homepage",
   data() {
     return {
-      isImageHero: true
+      isImageHero: true,
+      isSpecializing: true,
+      isNavTitle: true
     };
   },
   mounted() {
@@ -323,6 +399,8 @@ export default {
 
     if (screenWidth < 720) {
       this.isImageHero = false;
+      this.isSpecializing = false;
+      this.isNavTitle = false;
       console.log(this.isImageHero);
     }
   }
@@ -710,9 +788,17 @@ $target-width: 375px;
     padding-top: 50px;
     padding-bottom: 50px;
 
+    /* @media screen and ($width-name: $target-width) {
+      width: 100%;
+    } */
+
     .title-header {
       text-align: center;
       margin-top: 200px;
+
+      @media screen and ($width-name: $target-width) {
+        margin-top: 100px;
+      }
 
       h1 {
         font-family: "Quicksand", sans-serif;
@@ -720,6 +806,9 @@ $target-width: 375px;
         font-size: 32px;
         color: #64637b;
         margin-bottom: 15px;
+        @media screen and ($width-name: $target-width) {
+          font-size: 24px;
+        }
       }
 
       p {
@@ -728,9 +817,21 @@ $target-width: 375px;
         font-size: 18px;
         color: #64637b;
 
+        @media screen and ($width-name: $target-width) {
+          font-size: 14px;
+        }
+
         span {
           font-weight: 300;
         }
+      }
+    }
+
+    .card-mobile {
+      display: none;
+
+      @media screen and ($width-name: $target-width) {
+        display: inline-block;
       }
     }
 
@@ -740,6 +841,10 @@ $target-width: 375px;
       margin-top: 100px;
       padding-bottom: 50px;
       position: relative;
+
+      .carousel {
+        width: 100%;
+      }
 
       .square-dots {
         position: absolute;
@@ -847,10 +952,33 @@ $target-width: 375px;
     justify-content: space-between;
     align-items: center;
 
+    @media screen and ($width-name: $target-width) {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+
     .column {
       margin-top: 200px;
       position: relative;
       min-height: 700px;
+
+      @media screen and ($width-name: $target-width) {
+        min-height: 300px;
+        margin-top: 0;
+      }
+
+      .image-holder {
+        @media screen and ($width-name: $target-width) {
+          text-align: center;
+        }
+        img {
+          @media screen and ($width-name: $target-width) {
+            width: 60%;
+            margin-left: 40px;
+          }
+        }
+      }
+
       .title {
         h1 {
           font-family: "Quicksand", sans-serif;
@@ -878,8 +1006,14 @@ $target-width: 375px;
 
       .gallery {
         position: absolute;
-        right: 20%;
-        bottom: 2%;
+        right: 0%;
+        bottom: 0%;
+
+        img {
+          @media screen and ($width-name: $target-width) {
+            width: 60%;
+          }
+        }
       }
     }
   }
@@ -909,6 +1043,7 @@ $target-width: 375px;
       background-image: url("~assets/images/square-dots.svg");
       background-repeat: no-repeat;
       background-position: 10% 80%;
+
       .content {
         background: #3838f8;
         box-shadow: 0px 8px 20px rgba(56, 56, 248, 0.3);
@@ -924,6 +1059,10 @@ $target-width: 375px;
         align-items: center;
         padding: 50px;
 
+        @media screen and ($width-name: $target-width) {
+          flex-direction: column;
+        }
+
         .greeting {
           h1 {
             text-align: center;
@@ -931,6 +1070,10 @@ $target-width: 375px;
             font-weight: 600;
             font-size: 32px;
             color: #ffffff;
+
+            @media screen and ($width-name: $target-width) {
+              margin-bottom: 14px;
+            }
           }
         }
 
@@ -941,6 +1084,10 @@ $target-width: 375px;
             font-weight: 400;
             font-size: 24px;
             color: #ffffff;
+
+            @media screen and ($width-name: $target-width) {
+              margin-bottom: 44px;
+            }
           }
         }
 
@@ -959,6 +1106,10 @@ $target-width: 375px;
             box-sizing: border-box;
             border-radius: 4px;
 
+            @media screen and ($width-name: $target-width) {
+              width: 100%;
+            }
+
             img {
               position: relative;
               top: 2px;
@@ -975,6 +1126,10 @@ $target-width: 375px;
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @media screen and ($width-name: $target-width) {
+      width: 100%;
+    }
     .content {
       display: flex;
       justify-content: center;
@@ -994,6 +1149,10 @@ $target-width: 375px;
               font-size: 18px;
               font-weight: 300;
               color: #64637b;
+
+              @media screen and ($width-name: $target-width) {
+                font-size: 16px;
+              }
             }
           }
         }
