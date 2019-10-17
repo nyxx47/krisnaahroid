@@ -312,7 +312,7 @@
                 <br />Developer, You can find my recent projects on
                 <br />
                 <a href="https://dribbble.com/ahroidlife" target="_blank">Dribbble</a> and
-                <a href="#">Instagram</a> or if you’re interested in
+                <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">Instagram</a> or if you’re interested in
                 <br />my Design and if you are want to development
                 <br />an application, let me know.
                 <br>
@@ -891,6 +891,10 @@ $target-width: 375px;
         flex-direction: column;
         justify-content: space-between;
         transition: all 0.3s ease-in-out;
+
+        @media screen and ($width-name: $target-width) {
+        width: 295px;
+      }
 
         .line {
           position: absolute;
