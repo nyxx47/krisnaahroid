@@ -410,6 +410,15 @@
 <script>
 export default {
   name: "homepage",
+  head () {
+    return {
+      title: "Krisna Ahroid - Freelancer",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'Krisna Ahroid. A freelance UI/UX Designer & Apps Developer based in Jakarta, Indonesia' }
+      ]
+    }
+  },
   data() {
     return {
       isImageHero: true,
