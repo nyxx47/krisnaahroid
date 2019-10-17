@@ -437,7 +437,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
 
 $width-name: max-device-width;
-$target-width: 375px;
+$target-width: 675px;
 
 .container {
   #hero-section {
@@ -896,6 +896,14 @@ $target-width: 375px;
         width: 295px;
       }
 
+      @media screen and (max-width: 320px) {
+        width: 250px;
+      }
+
+      @media screen and  (min-width: 380px)and(max-width: 520px) {
+        width: 320px;
+      }
+
         .line {
           position: absolute;
           right: 6%;
@@ -985,6 +993,7 @@ $target-width: 375px;
         flex-direction: column-reverse;
         margin-top: 100px;
       }
+      
 
       .art-box {
         position: absolute;
@@ -1160,6 +1169,10 @@ $target-width: 375px;
 
         @media screen and ($width-name: $target-width) {
           flex-direction: column;
+        }
+
+         @media screen and (max-width: 320px) {
+          width: 100%;
         }
 
         .greeting {
