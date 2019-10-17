@@ -105,57 +105,57 @@
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/l_zeplin.svg" alt="adobe xd" />
+                <img src="~assets/images/l_zeplin.svg" alt="zeplin" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/invision.svg" alt="adobe xd" />
+                <img src="~assets/images/invision.svg" alt="invinsion" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/react.svg" alt="adobe xd" />
+                <img src="~assets/images/react.svg" alt="react" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/l_redux.svg" alt="adobe xd" />
+                <img src="~assets/images/l_redux.svg" alt="redux" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/vue.svg" alt="adobe xd" />
+                <img src="~assets/images/vue.svg" alt="vuejs" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/nuxt.svg" alt="adobe xd" />
+                <img src="~assets/images/nuxt.svg" alt="nuxtjs" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/swift.svg" alt="adobe xd" />
+                <img src="~assets/images/swift.svg" alt="swift" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/XcodeIcon_2x.svg" alt="adobe xd" />
+                <img src="~assets/images/XcodeIcon_2x.svg" alt="xcode" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/github.svg" alt="adobe xd" />
+                <img src="~assets/images/github.svg" alt="github" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/gitlab.svg" alt="adobe xd" />
+                <img src="~assets/images/gitlab.svg" alt="gitlab" />
               </div>
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/bitbucket.svg" alt="adobe xd" />
+                <img src="~assets/images/bitbucket.svg" alt="bitbucket" />
               </div>
             </slide>
           </carousel>
