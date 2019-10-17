@@ -16,7 +16,7 @@
           </div>
           <ul class="tabs">
             <li>
-              <a href="#">Why Me?</a>
+              <a href="#">About Me</a>
             </li>
             <li>
               <a href="#">Portofolio</a>
@@ -284,32 +284,56 @@
       </div>
     </section>
     <section id="add-value-section">
-      <div class="column">
-        <div class="title">
-          <h1>WHY ME?</h1>
+      <!-- <div class="title">
+        <h1>WHY ME?</h1>
+      </div> -->
+      <div class="wrapper-column">
+        <img
+          src="~assets/images/art-square-about-me.svg"
+          class="art-box"
+          alt="art square ahroidlife"
+        />
+        <div class="column left-column">
+          <div class="content">
+            <div class="title-header">
+              <h1>
+                Krisna Ahroid.
+                <br />A freelance UI/UX Designer
+                <span>&</span>
+                <br />Frontend Developer based in
+                <br />Jakarta, Indonesia
+              </h1>
+            </div>
+            <div class="body-content">
+              <p>
+                <strong>Hi there!</strong>
+                <br />
+                <br />I’m an enthusiastic UI/UX Designer & App
+                <br />Developer, You can find my recent projects on
+                <br />
+                <a href="https://dribbble.com/ahroidlife" target="_blank">Dribbble</a> and
+                <a href="#">Instagram</a> or if you’re interested in
+                <br />my Design and if you are want to development
+                <br />an application, let me know.
+                <br>
+                <br>
+                <strong>
+                I’m currently available for
+                <br />freelance work.
+              </strong>
+              <br/><br/>
+              <p>If you have a project that you want to get started, <br> let me know.</p>
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="content">
-          <p>
-            Hi there!
-            <br />I am a qualified Professional UI/UX Designer &
-            <br />IOS Developer.
-            <br />
-            <br />I’m an enthusiastic UI/UX Designer & App
-            <br />Developer, You can find my recent projects on
-            <br />
-            <a href="#">Dribbble</a> and
-            <a href="#">Instagram</a> or if you’re interested in
-            <br />my Design and if you are want to development
-            <br />an application, let me know.
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="image-holder">
-          <img src="~assets/images/profile-conference.png" alt="profile conference" />
-        </div>
-        <div class="gallery">
-          <img src="~assets/images/gallery.png" alt="gallery" />
+        <div class="column right-column">
+          <div class="image-holder">
+            <img src="~assets/images/profile-conference.png" alt="profile conference" />
+          </div>
+          <div class="gallery">
+            <img src="~assets/images/gallery.png" alt="gallery" />
+          </div>
         </div>
       </div>
     </section>
@@ -326,7 +350,7 @@
             <h2>ahroidlife@gmail.com</h2>
           </div>
           <div class="message">
-            <a href="#">
+            <a href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!" target="_black">
               <div class="button-message">
                 <img src="~assets/images/whatsapp.svg" alt srcset />
                 <span>Message</span>
@@ -344,7 +368,7 @@
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Why Me?</a>
+              <a href="#">About Me</a>
             </li>
             <li>
               <a href="#">Portofolio</a>
@@ -946,72 +970,143 @@ $target-width: 375px;
   }
 
   #add-value-section {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and ($width-name: $target-width) {
-      flex-direction: column;
-      margin-top: 100px;
-    }
-
-    .column {
-      margin-top: 200px;
+        margin-top: 200px;
+    .wrapper-column {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: relative;
-      min-height: 700px;
 
       @media screen and ($width-name: $target-width) {
-        min-height: 300px;
-        margin-top: 0;
+        flex-direction: column-reverse;
+        margin-top: 100px;
       }
 
-      .image-holder {
-        @media screen and ($width-name: $target-width) {
-          text-align: center;
-        }
-        img {
-          @media screen and ($width-name: $target-width) {
-            width: 60%;
-            margin-left: 40px;
-          }
-        }
-      }
-
-      .title {
-        h1 {
-          font-family: "Quicksand", sans-serif;
-          font-weight: 600;
-          font-size: 14px;
-          color: #3838f8;
-        }
-      }
-
-      .content {
-        margin-top: 50px;
-        p {
-          font-family: "Quicksand", sans-serif;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 18px;
-          color: #64637b;
-
-          a {
-            color: #3838f8;
-            text-decoration: none;
-          }
-        }
-      }
-
-      .gallery {
+      .art-box {
         position: absolute;
-        right: 0%;
-        bottom: 0%;
+        left: 0;
+        top: 3%;
 
-        img {
+        @media screen and ($width-name: $target-width) {
+          min-height: 300px;
+          margin-top: 0;
+          width: 80%;
+          top: 33%;
+        }
+      }
+
+      .left-column {
+        margin-left: 5%;
+
+        @media screen and ($width-name: $target-width) {
+          margin-right: 5%;
+        }
+      }
+
+      .right-column {
+        margin-right: 5%;
+        @media screen and ($width-name: $target-width) {
+          margin-left: 10%;
+        }
+      }
+
+      .column {
+        position: relative;
+        min-height: 700px;
+
+        @media screen and ($width-name: $target-width) {
+          min-height: 300px;
+          margin-top: 0;
+        }
+
+        .image-holder {
           @media screen and ($width-name: $target-width) {
-            width: 60%;
+            text-align: center;
+          }
+          img {
+            @media screen and ($width-name: $target-width) {
+              width: 60%;
+              margin-left: 40px;
+            }
+          }
+        }
+
+        .title {
+          h1 {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: #3838f8;
+          }
+        }
+
+        .content {
+          margin-top: 50px;
+
+          .title-header {
+            margin-bottom: 25px;
+            min-height: 250px;
+            padding-top: 14px;
+            position: relative;
+
+            @media screen and ($width-name: $target-width) {
+          margin-bottom: 40px;
+          margin-top: 20px;
+          min-height: auto;
+        }
+            h1 {
+              font-family: "Quicksand", sans-serif;
+              font-weight: 300;
+              font-size: 32px;
+              line-height: 45px;
+              color: #64637b;
+
+              span {
+                font-weight: 300;
+              }
+
+              @media screen and ($width-name: $target-width) {
+          font-size: 24px;
+          line-height: 35px;
+        }
+            }
+          }
+
+          .body-content {
+            p {
+              font-family: "Quicksand", sans-serif;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 24px;
+              color: #64637b;
+
+              a {
+                color: #3838f8;
+                text-decoration: none;
+              }
+
+              strong {
+                font-size: 18px;
+              }
+
+              @media screen and ($width-name: $target-width) {
+          font-size: 14px;
+        }
+            }
+
+            
+          }
+        }
+
+        .gallery {
+          position: absolute;
+          right: 0%;
+          bottom: 0%;
+
+          img {
+            @media screen and ($width-name: $target-width) {
+              width: 60%;
+            }
           }
         }
       }
