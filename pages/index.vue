@@ -105,11 +105,6 @@
             </slide>
             <slide>
               <div class="image">
-                <img src="~assets/images/l_zeplin.svg" alt="zeplin" />
-              </div>
-            </slide>
-            <slide>
-              <div class="image">
                 <img src="~assets/images/invision.svg" alt="invinsion" />
               </div>
             </slide>
@@ -322,7 +317,7 @@
                 <br />freelance work.
               </strong>
               <br/><br/>
-              <p>If you have a project that you want to get started, <br> let me know.</p>
+              If you have a project that you want to get started, <br> let me know.
               </p>
             </div>
           </div>
