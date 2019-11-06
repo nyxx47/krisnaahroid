@@ -1,0 +1,769 @@
+<template>
+  <div class="container">
+    <div class="content">
+      <div class="navigation-bar">
+        <div class="backpress">
+          <img src="~assets/images/arrow-back.svg" />
+        </div>
+        <div class="social">
+          <ul class="social">
+            <li>
+              <a href="#">IN</a>
+            </li>
+            <li>
+              <a href="#">IG</a>
+            </li>
+            <li>
+              <a href="#">FB</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-hero">
+        <div class="inner-section-hero">
+          <img src="~assets/images/logo-lunafreya.svg" alt="lunafreya" />
+          <div class="text-section-hero">
+            <p>Lunafreya is a UI Kit created to help you introduce your shoppping app, boost your creativity and save you time.</p>
+          </div>
+          <div class="line-holder"></div>
+        </div>
+      </div>
+      <div class="section-screens-holder">
+        <div class="screens-wrapper">
+          <div class="screen1">
+            <img src="~assets/images/screen-1.png" alt="screen 1" />
+          </div>
+          <div class="screen2">
+            <img src="~assets/images/screen-2.2.png" alt="screen 2.2 " />
+            <img src="~assets/images/screen-2.png" alt="screen 2 " />
+          </div>
+          <div class="screen3">
+            <img src="~assets/images/screen-3.2.png" alt="screen 3.2 " />
+            <img src="~assets/images/screen-3.1.png" alt="screen 3.1 " />
+          </div>
+        </div>
+        <div class="pricing">
+          <div class="price">
+            <strong>$75</strong>
+          </div>
+          <div class="price">
+            <p>$82</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-highlight">
+        <div class="title-wrapper">
+          <h4>HIGHLIGHTS</h4>
+          <h1>Full Customizable</h1>
+        </div>
+        <div class="highlight-wrapper">
+          <div class="highlight-item">
+            <img src="~assets/images/icon-screen.svg" alt="icon screen" />
+            <h1>24+ Screens</h1>
+            <p>On screen iPhone X</p>
+          </div>
+          <div class="highlight-item">
+            <img src="~assets/images/icon-typo.svg" alt="icon typo" />
+            <h1>Typography</h1>
+            <p>Avenir Font family</p>
+          </div>
+          <div class="highlight-item">
+            <img src="~assets/images/icon-vector.svg" alt="icon vector" />
+            <h1>Vector Base</h1>
+            <p>Can modify your style</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-intro">
+        <img
+          src="~assets/images/art-lunafreya-hero.svg"
+          alt="art-lunafreya-hero"
+          class="art-square-intro"
+        />
+        <div class="intro-wrapper">
+          <div class="intro-item">
+            <img src="~assets/images/screen-1.png" alt="screen 1" class="device-intro" />
+          </div>
+          <div class="intro-item">
+            <div class="content-intro">
+              <img src="~assets/images/art-logo-lunaferya.svg" alt="art-logo-lunaferya" />
+              <h1>
+                Clean, Minimal
+                <span>&</span> Modern design
+              </h1>
+              <p>
+                You can easily make this kit your own by simply modifying the global text and color styles and adding your own content.
+                Available for the latest versions of Adobe XD.
+              </p>
+
+              <div class="multi-button-container">
+                <a href="#">
+                  <div class="button-wrap black-btn">Buy Now</div>
+                </a>
+                <a href="#">
+                  <div class="button-wrap">Message</div>
+                </a>
+              </div>
+              <img
+                src="~assets/images/art-intro-lunafreya.svg"
+                alt="art-intro-lunafreya"
+                class="art-intro"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-template-app">
+        <div class="title-template">
+          <h1>
+            <span>BONUS</span> FREE TEMPLATE
+          </h1>
+        </div>
+        <div class="template-header">
+          <div class="template-header-wrap template-content">
+            <img src="~assets/images/art-logo-lunaferya.svg" alt="art-logo-lunaferya" />
+            <h1>
+              Clean, Minimal
+              <span>&</span> Modern design
+            </h1>
+            <p>Lunafreya make your developers who are challenged to develop store mobile application in a shorter time and the best interaction for your user.</p>
+            <div class="platform-list">
+              <div class="platform">
+                <img src="~assets/images/icon-android.svg" />
+              </div>
+              <div class="platform">
+                <img src="~assets/images/icon-ios.svg" />
+              </div>
+              <div class="platform">
+                <img src="~assets/images/icon-react.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="template-header-wrap">
+            <vue-plyr>
+              <div data-plyr-provider="youtube" :data-plyr-embed-id="videoID"></div>
+            </vue-plyr>
+          </div>
+        </div>
+      </div>
+      <section id="contact">
+        <div class="title">
+          <h1>Contact Me</h1>
+        </div>
+        <div class="content-wrap">
+          <div class="content-contact">
+            <div class="greeting">
+              <h1>Say, Hello!</h1>
+            </div>
+            <div class="email-address">
+              <h2>ahroidlife@gmail.com</h2>
+            </div>
+            <div class="message">
+              <a
+                href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!"
+                target="_black"
+              >
+                <div class="button-message">
+                  <img src="~assets/images/whatsapp.svg" alt srcset />
+                  <span>Message</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+        <div class="content-section">
+          <div class="navigation">
+            <ul v-if="isNavTitle" class="tabs">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About Me</a>
+              </li>
+              <li>
+                <a href="#">Portofolio</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+            <ul v-else class="tabs">
+              <li>
+                <a href="#">Why Me?</a>
+              </li>
+              <li>
+                <a href="#">Portofolio</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="socials">
+            <ul class="social">
+              <li>
+                <a href="#">IN</a>
+              </li>
+              <li>
+                <a href="#">IG</a>
+              </li>
+              <li>
+                <a href="#">FB</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: "products",
+  data() {
+    return {
+      videoID: "FESJUA0_KR8"
+    };
+  },
+  components: {},
+  methods: {}
+};
+</script>
+
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
+
+$width-name: max-device-width;
+$target-width: 675px;
+
+.container {
+  background: #ededed;
+  .content {
+    padding: 20px;
+    background: url("~assets/images/outline-art-header.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    .navigation-bar {
+      display: flex;
+      justify-content: space-between;
+
+      .backpress {
+        background: #1e2127;
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 25px rgba(30, 33, 39, 0.2);
+      }
+
+      ul.social {
+        margin-left: -30px;
+
+        @media screen and ($width-name: $target-width) {
+          margin-left: 0;
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          top: 4px;
+        }
+        li {
+          display: inline;
+          margin-left: 14px;
+          margin-right: 14px;
+          font-family: "Nunito", sans-serif;
+          font-weight: 400;
+          color: #1e2127;
+          font-size: 14px;
+          box-sizing: border-box;
+          padding: 4px 5px 4px 5px;
+          border-radius: 4px;
+
+          &:nth-child(3) {
+            border: 1px solid #1e2127;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(30, 33, 39, 0.2);
+
+            @media screen and ($width-name: $target-width) {
+              background: #ffffff;
+
+              a {
+                color: #1e2127;
+              }
+            }
+          }
+
+          a {
+            text-decoration: none;
+
+            @media screen and ($width-name: $target-width) {
+              color: #ffffff;
+            }
+          }
+
+          @media screen and ($width-name: $target-width) {
+            margin-left: 8px;
+            margin-right: 8px;
+            background: none;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .section-hero {
+      width: 100%;
+      display: flex;
+      height: 80vh;
+      justify-content: center;
+      flex-direction: column;
+      .inner-section-hero {
+        text-align: center;
+
+        img {
+          pointer-events: none;
+        }
+
+        .text-section-hero {
+          width: 50%;
+          margin: 0 auto;
+          p {
+            font-family: "Nunito", sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            color: 1e2127;
+          }
+        }
+        .line-holder {
+          background: #1e2127;
+          width: 100px;
+          height: 3px;
+          border-radius: 30px;
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+      }
+    }
+    .section-screens-holder {
+      background-image: url("~assets/images/circle-drawer.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: auto;
+      padding-top: 100px;
+
+      .screens-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        .screen1 {
+          z-index: 99;
+          position: absolute;
+        }
+
+        .screen2 {
+          z-index: 90;
+          width: 50%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          position: absolute;
+        }
+
+        .screen3 {
+          z-index: 80;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+      .pricing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 50px;
+        flex-direction: row;
+
+        .price {
+          margin: 20px;
+          font-size: 32px;
+          strong {
+            color: #1e2127;
+          }
+          p {
+            text-decoration: line-through;
+            color: #1e2127;
+          }
+        }
+      }
+    }
+    .section-highlight {
+      background: url("~assets/images/art-square-lunafreya.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      .title-wrapper {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h1 {
+          font-size: 24px;
+          color: #1e2127;
+          font-family: "Nunito", sans-serif;
+        }
+
+        h4 {
+          font-family: "Nunito", sans-serif;
+          color: #1e2127;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+      .highlight-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .highlight-item {
+          margin: 20px;
+          text-align: center;
+          h1 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #1e2127;
+            font-family: "Nunito", sans-serif;
+          }
+          p {
+            font-size: 18px;
+            color: #1e2127;
+            font-family: "Nunito", sans-serif;
+          }
+        }
+      }
+    }
+    .section-intro {
+      position: relative;
+      margin-top: 200px;
+      .art-square-intro {
+        position: absolute;
+        left: -100px;
+        z-index: 0;
+        top: 15%;
+      }
+      .intro-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .intro-item {
+          flex: 1;
+          .device-intro {
+          }
+
+          .content-intro {
+            text-align: left;
+            padding-top: 100px;
+            h1 {
+              font-size: 18px;
+              color: #1e2127;
+              font-weight: 600;
+              font-family: "Nunito", sans-serif;
+
+              span {
+                font-weight: 300;
+                font-family: "Nunito", sans-serif;
+              }
+            }
+
+            p {
+              width: 80%;
+              font-size: 18px;
+              font-weight: 300;
+              color: #1e2127;
+              font-family: "Nunito", sans-serif;
+            }
+
+            .multi-button-container {
+              display: flex;
+              flex-direction: row;
+              margin-top: 100px;
+
+              a {
+                text-decoration: none;
+              }
+              .button-wrap {
+                padding: 8px 20px 8px 20px;
+                background: white;
+                font-weight: 400;
+                color: #1e2127;
+                font-family: "Nunito", sans-serif;
+                margin-right: 20px;
+                border-radius: 4px;
+              }
+
+              .black-btn {
+                background-color: #1e2127 !important;
+                color: #ffffff !important;
+              }
+            }
+
+            .art-intro {
+              position: absolute;
+              right: 10%;
+            }
+          }
+        }
+      }
+    }
+    .section-template-app {
+      padding-left: 20px;
+      padding-right: 20px;
+      .title-template {
+        background: url("~assets/images/art-title.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          position: relative;
+          top: 5%;
+          font-size: 18px;
+          font-weight: 600;
+          color: #ffffff;
+          font-family: "Nunito", sans-serif;
+          span {
+            font-weight: 300;
+          }
+        }
+      }
+
+      .template-content {
+        text-align: left;
+        padding-top: 30px;
+        h1 {
+          font-size: 18px;
+          color: #1e2127;
+          font-weight: 600;
+          font-family: "Nunito", sans-serif;
+
+          span {
+            font-weight: 300;
+            font-family: "Nunito", sans-serif;
+          }
+        }
+
+        p {
+          margin-top: 20px;
+          width: 80%;
+          font-size: 18px;
+          font-weight: 300;
+          color: #1e2127;
+          font-family: "Nunito", sans-serif;
+        }
+
+        .platform-list {
+          display: flex;
+          flex-direction: row;
+          margin-top: 50px;
+          .platform {
+            margin-right: 30px;
+          }
+        }
+      }
+
+      .template-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 150px;
+
+        .template-header-wrap {
+          flex: 1;
+        }
+      }
+    }
+    #contact {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 100px;
+
+      .title {
+        margin-top: 50px;
+        h1 {
+          text-align: center;
+          font-family: "Quicksand", sans-serif;
+          font-weight: 600;
+          font-size: 32px;
+          color: #64637b;
+        }
+      }
+
+      .content-wrap {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        background-image: url("~assets/images/square-dots.svg");
+        background-repeat: no-repeat;
+        background-position: 10% 80%;
+
+        .content-contact {
+          background: #1e2127;
+          box-shadow: 0px 8px 20px rgba(30, 33, 39, 0.3);
+          width: 900px;
+          min-height: 165px;
+          border-radius: 10px 10px 40px 10px;
+          background-image: url("~assets/images/art-contact.svg");
+          background-repeat: no-repeat;
+          background-position: bottom right;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 50px;
+
+          @media screen and ($width-name: $target-width) {
+            flex-direction: column;
+          }
+
+          @media screen and (max-width: 320px) {
+            width: 100%;
+          }
+
+          .greeting {
+            h1 {
+              text-align: center;
+              font-family: "Quicksand", sans-serif;
+              font-weight: 600;
+              font-size: 32px;
+              color: #ffffff;
+
+              @media screen and ($width-name: $target-width) {
+                margin-bottom: 14px;
+              }
+            }
+          }
+
+          .email-address {
+            h2 {
+              text-align: center;
+              font-family: "Quicksand", sans-serif;
+              font-weight: 400;
+              font-size: 24px;
+              color: #ffffff;
+
+              @media screen and ($width-name: $target-width) {
+                margin-bottom: 44px;
+              }
+            }
+          }
+
+          .message {
+            a {
+              text-decoration: none;
+            }
+            .button-message {
+              text-align: center;
+              font-family: "Quicksand", sans-serif;
+              font-weight: 400;
+              font-size: 24px;
+              color: #64637b;
+              background: #ffffff;
+              padding: 8px 22px 8px 22px;
+              box-sizing: border-box;
+              border-radius: 4px;
+
+              @media screen and ($width-name: $target-width) {
+                width: 100%;
+              }
+
+              img {
+                position: relative;
+                top: 2px;
+                right: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #footer {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      @media screen and ($width-name: $target-width) {
+        width: 100%;
+      }
+      .content-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .navigation {
+          ul.tabs {
+            padding: 0 !important;
+            li {
+              display: inline;
+              margin-left: 24px;
+              margin-right: 24px;
+
+              a {
+                text-decoration: none;
+                font-family: "Nunito", sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+                color: #1e2127;
+
+                @media screen and ($width-name: $target-width) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .socials {
+          margin-top: 50px;
+          ul.social {
+            margin-left: -30px;
+            li {
+              display: inline;
+              margin-left: 14px;
+              margin-right: 14px;
+              font-family: "Nunito", sans-serif;
+              font-weight: 400;
+              color: #1e2127;
+              font-size: 14px;
+              box-sizing: border-box;
+              padding: 4px 5px 4px 5px;
+              border-radius: 4px;
+
+              &:nth-child(2) {
+                border: 1px solid #1e2127;
+                background-color: white;
+                box-shadow: 0px 4px 8px rgba(30, 33, 39, 0.2);
+              }
+
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</style>

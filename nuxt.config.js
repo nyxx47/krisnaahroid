@@ -29,11 +29,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ["vue-plyr/dist/vue-plyr.css"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "~/plugins/vue-carousel.js", ssr: false }],
+  plugins: [
+    { src: "~/plugins/vue-carousel.js", ssr: false },
+    { src: "~/plugins/vue-plyr.js" }
+  ],
   /*
    ** Nuxt.js dev-modules
    */

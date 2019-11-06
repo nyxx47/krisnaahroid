@@ -19,7 +19,7 @@
               <a href="#">About Me</a>
             </li>
             <li>
-              <a href="#">Portofolio</a>
+              <a href="#">Products</a>
             </li>
             <li>
               <a href="#">Contact</a>
@@ -281,7 +281,7 @@
     <section id="add-value-section">
       <!-- <div class="title">
         <h1>WHY ME?</h1>
-      </div> -->
+      </div>-->
       <div class="wrapper-column">
         <img
           src="~assets/images/art-square-about-me.svg"
@@ -310,14 +310,15 @@
                 <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">Instagram</a> or if you’re interested in
                 <br />my Design and if you are want to development
                 <br />an application, let me know.
-                <br>
-                <br>
+                <br />
+                <br />
                 <strong>
-                I’m currently available for
-                <br />freelance work.
-              </strong>
-              <br/><br/>
-              If you have a project that you want to get started, <br> let me know.
+                  I’m currently available for
+                  <br />freelance work.
+                </strong>
+                <br />
+                <br />If you have a project that you want to get started,
+                <br />let me know.
               </p>
             </div>
           </div>
@@ -345,7 +346,10 @@
             <h2>ahroidlife@gmail.com</h2>
           </div>
           <div class="message">
-            <a href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!" target="_black">
+            <a
+              href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!"
+              target="_black"
+            >
               <div class="button-message">
                 <img src="~assets/images/whatsapp.svg" alt srcset />
                 <span>Message</span>
@@ -405,14 +409,19 @@
 <script>
 export default {
   name: "homepage",
-  head () {
+  head() {
     return {
       title: "Krisna Ahroid - Freelancer",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        { hid: 'description', name: 'description', content: 'Krisna Ahroid. A freelance UI/UX Designer & Apps Developer based in Jakarta, Indonesia' }
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Krisna Ahroid. A freelance UI/UX Designer & Apps Developer based in Jakarta, Indonesia"
+        }
       ]
-    }
+    };
   },
   data() {
     return {
@@ -897,16 +906,16 @@ $target-width: 675px;
         transition: all 0.3s ease-in-out;
 
         @media screen and ($width-name: $target-width) {
-        width: 295px;
-      }
+          width: 295px;
+        }
 
-      @media screen and (max-width: 320px) {
-        width: 250px;
-      }
+        @media screen and (max-width: 320px) {
+          width: 250px;
+        }
 
-      @media screen and  (min-width: 380px)and(max-width: 520px) {
-        width: 320px;
-      }
+        @media screen and (min-width: 380px) and(max-width: 520px) {
+          width: 320px;
+        }
 
         .line {
           position: absolute;
@@ -986,7 +995,7 @@ $target-width: 675px;
   }
 
   #add-value-section {
-        margin-top: 200px;
+    margin-top: 200px;
     .wrapper-column {
       display: flex;
       justify-content: space-between;
@@ -997,7 +1006,6 @@ $target-width: 675px;
         flex-direction: column-reverse;
         margin-top: 100px;
       }
-      
 
       .art-box {
         position: absolute;
@@ -1067,10 +1075,10 @@ $target-width: 675px;
             position: relative;
 
             @media screen and ($width-name: $target-width) {
-          margin-bottom: 40px;
-          margin-top: 20px;
-          min-height: auto;
-        }
+              margin-bottom: 40px;
+              margin-top: 20px;
+              min-height: auto;
+            }
             h1 {
               font-family: "Quicksand", sans-serif;
               font-weight: 300;
@@ -1083,9 +1091,9 @@ $target-width: 675px;
               }
 
               @media screen and ($width-name: $target-width) {
-          font-size: 24px;
-          line-height: 35px;
-        }
+                font-size: 24px;
+                line-height: 35px;
+              }
             }
           }
 
@@ -1107,11 +1115,9 @@ $target-width: 675px;
               }
 
               @media screen and ($width-name: $target-width) {
-          font-size: 14px;
-        }
+                font-size: 14px;
+              }
             }
-
-            
           }
         }
 
@@ -1175,7 +1181,7 @@ $target-width: 675px;
           flex-direction: column;
         }
 
-         @media screen and (max-width: 320px) {
+        @media screen and (max-width: 320px) {
           width: 100%;
         }
 

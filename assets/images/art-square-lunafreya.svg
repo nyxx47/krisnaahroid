@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1131.258" height="372.03" viewBox="0 0 1131.258 372.03">
+  <defs>
+    <filter id="Rectangle_75" x="794.754" y="0" width="336.504" height="336.504" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_111" data-name="Group 111" transform="translate(-110.39 -1287.276)">
+    <g id="Group_110" data-name="Group 110">
+      <rect id="Rectangle_74" data-name="Rectangle 74" width="197" height="197" rx="40" transform="matrix(0.342, 0.94, -0.94, 0.342, 298.245, 1406.808)" fill="#e1e2e2"/>
+      <g id="Rectangle_95" data-name="Rectangle 95" transform="matrix(0.342, 0.94, -0.94, 0.342, 303.027, 1396.555)" fill="none" stroke="#1e2127" stroke-width="1">
+        <rect width="205" height="205" rx="40" stroke="none"/>
+        <rect x="0.5" y="0.5" width="204" height="204" rx="39.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_109" data-name="Group 109">
+      <g transform="matrix(1, 0, 0, 1, 110.39, 1287.28)" filter="url(#Rectangle_75)">
+        <rect id="Rectangle_75-2" data-name="Rectangle 75" width="222" height="222" rx="40" transform="matrix(0.09, 1, -1, 0.09, 1063.91, 38)" fill="#1e2127"/>
+      </g>
+      <g id="Group_107" data-name="Group 107" transform="translate(-2 -17)">
+        <path id="Path_49" data-name="Path 49" d="M2630.107,1296.5l108.474-108.474" transform="translate(-1615 220)" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+        <path id="Path_50" data-name="Path 50" d="M2630.107,1256.263l68.237-68.237" transform="translate(-1611 227.237)" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+        <path id="Path_51" data-name="Path 51" d="M2630.107,1235.431l47.405-47.405" transform="translate(-1549.168 243.237)" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+      </g>
+    </g>
+  </g>
+</svg>
