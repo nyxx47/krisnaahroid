@@ -227,6 +227,20 @@
 <script>
 export default {
   name: "products",
+  head() {
+    return {
+      title: "Fashion Ecommerce UI KIT",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Lunafreya is a UI Kit created to help you introduce your shoppping app, boost your creativity and save you time."
+        }
+      ]
+    };
+  },
   data() {
     return {
       videoID: "FESJUA0_KR8",

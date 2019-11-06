@@ -13,7 +13,7 @@ export default {
         name: "description",
         content:
           process.env.npm_package_description ||
-          "Krisna Ahroid. A freelance UI/UX Designer & Apps Developer based in Jakarta, Indonesia"
+          "Hi there, I'm Krisna Ahroid. A freelance UI/UX Designer & Web Developer based in Jakarta, Indonesia."
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
