@@ -3,7 +3,9 @@
     <div class="content">
       <div class="navigation-bar">
         <div class="backpress">
-          <img src="~assets/images/arrow-back.svg" />
+          <nuxt-link to="/">
+            <img src="~assets/images/arrow-back.svg" />
+          </nuxt-link>
         </div>
         <div class="social">
           <ul class="social">
@@ -74,6 +76,7 @@
           </div>
         </div>
       </div>
+
       <div class="section-intro">
         <img
           src="~assets/images/art-lunafreya-hero.svg"
@@ -177,13 +180,13 @@
           <div class="navigation">
             <ul v-if="isNavTitle" class="tabs">
               <li>
-                <a href="#">Home</a>
+                <nuxt-link to="/">Home</nuxt-link>
               </li>
               <li>
                 <a href="#">About Me</a>
               </li>
               <li>
-                <a href="#">Portofolio</a>
+                <nuxt-link to="/product">Products</nuxt-link>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -191,10 +194,10 @@
             </ul>
             <ul v-else class="tabs">
               <li>
-                <a href="#">Why Me?</a>
+                <nuxt-link to="/">Home</nuxt-link>
               </li>
               <li>
-                <a href="#">Portofolio</a>
+                <nuxt-link to="/product">Products</nuxt-link>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -226,11 +229,23 @@ export default {
   name: "products",
   data() {
     return {
-      videoID: "FESJUA0_KR8"
+      videoID: "FESJUA0_KR8",
+      isNavTitle: true
     };
   },
   components: {},
-  methods: {}
+  methods: {},
+  mounted() {
+    let screenWidth = window.innerWidth;
+    console.log("Screen width is ", screenWidth);
+
+    if (screenWidth < 720) {
+      this.isImageHero = false;
+      this.isSpecializing = false;
+      this.isNavTitle = false;
+      console.log(this.isImageHero);
+    }
+  }
 };
 </script>
 
@@ -327,16 +342,27 @@ $target-width: 675px;
 
         img {
           pointer-events: none;
+
+          @media screen and ($width-name: $target-width) {
+            width: 50%;
+          }
         }
 
         .text-section-hero {
           width: 50%;
           margin: 0 auto;
+          @media screen and ($width-name: $target-width) {
+            width: 100%;
+          }
           p {
             font-family: "Nunito", sans-serif;
             font-weight: 300;
             font-size: 18px;
             color: 1e2127;
+
+            @media screen and ($width-name: $target-width) {
+              font-size: 14px;
+            }
           }
         }
         .line-holder {
@@ -346,6 +372,10 @@ $target-width: 675px;
           border-radius: 30px;
           margin: 0 auto;
           margin-top: 30px;
+
+          @media screen and ($width-name: $target-width) {
+            width: 50px;
+          }
         }
       }
     }
@@ -356,6 +386,11 @@ $target-width: 675px;
       height: auto;
       padding-top: 100px;
 
+      @media screen and ($width-name: $target-width) {
+        background-image: none;
+        padding-top: 0;
+      }
+
       .screens-wrapper {
         display: flex;
         align-items: center;
@@ -364,6 +399,13 @@ $target-width: 675px;
         .screen1 {
           z-index: 99;
           position: absolute;
+          text-align: center;
+
+          img {
+            @media screen and ($width-name: $target-width) {
+              width: 80%;
+            }
+          }
         }
 
         .screen2 {
@@ -373,6 +415,10 @@ $target-width: 675px;
           flex-direction: row;
           justify-content: space-around;
           position: absolute;
+
+          @media screen and ($width-name: $target-width) {
+            display: none;
+          }
         }
 
         .screen3 {
@@ -381,6 +427,16 @@ $target-width: 675px;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+
+          @media screen and ($width-name: $target-width) {
+            width: 90%;
+          }
+
+          img {
+            @media screen and ($width-name: $target-width) {
+              width: 60%;
+            }
+          }
         }
       }
       .pricing {
@@ -391,9 +447,18 @@ $target-width: 675px;
         top: 50px;
         flex-direction: row;
 
+        @media screen and ($width-name: $target-width) {
+          top: 20px;
+        }
+
         .price {
           margin: 20px;
           font-size: 32px;
+
+          @media screen and ($width-name: $target-width) {
+            font-size: 22px;
+            margin: 10px;
+          }
           strong {
             color: #1e2127;
           }
@@ -409,10 +474,20 @@ $target-width: 675px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+
+      @media screen and ($width-name: $target-width) {
+        background-size: cover;
+        margin-top: 30px;
+      }
+
       .title-wrapper {
         text-align: center;
         padding-top: 100px;
         padding-bottom: 100px;
+
+        @media screen and ($width-name: $target-width) {
+          padding-bottom: 50px;
+        }
         h1 {
           font-size: 24px;
           color: #1e2127;
@@ -430,9 +505,16 @@ $target-width: 675px;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        @media screen and ($width-name: $target-width) {
+          flex-direction: column;
+        }
         .highlight-item {
           margin: 20px;
           text-align: center;
+          @media screen and ($width-name: $target-width) {
+            margin-top: 0;
+            margin-bottom: 50px;
+          }
           h1 {
             margin-top: 20px;
             font-size: 24px;
@@ -450,25 +532,49 @@ $target-width: 675px;
     .section-intro {
       position: relative;
       margin-top: 200px;
+
+      @media screen and ($width-name: $target-width) {
+        margin-top: 100px;
+      }
       .art-square-intro {
         position: absolute;
         left: -100px;
         z-index: 0;
         top: 15%;
+
+        @media screen and ($width-name: $target-width) {
+          width: 100%;
+          left: 0;
+        }
       }
       .intro-wrapper {
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @media screen and ($width-name: $target-width) {
+          flex-direction: column;
+        }
         .intro-item {
           flex: 1;
+          @media screen and ($width-name: $target-width) {
+            text-align: center;
+          }
           .device-intro {
+            @media screen and ($width-name: $target-width) {
+              width: 80%;
+            }
           }
 
           .content-intro {
             text-align: left;
             padding-top: 100px;
+            img {
+              @media screen and ($width-name: $target-width) {
+                width: 50%;
+              }
+            }
             h1 {
               font-size: 18px;
               color: #1e2127;
@@ -487,12 +593,18 @@ $target-width: 675px;
               font-weight: 300;
               color: #1e2127;
               font-family: "Nunito", sans-serif;
+
+              margin-top: 20px;
             }
 
             .multi-button-container {
               display: flex;
               flex-direction: row;
               margin-top: 100px;
+
+              @media screen and ($width-name: $target-width) {
+                margin-top: 50px;
+              }
 
               a {
                 text-decoration: none;
@@ -516,6 +628,10 @@ $target-width: 675px;
             .art-intro {
               position: absolute;
               right: 10%;
+
+              @media screen and ($width-name: $target-width) {
+                display: none;
+              }
             }
           }
         }
@@ -524,6 +640,9 @@ $target-width: 675px;
     .section-template-app {
       padding-left: 20px;
       padding-right: 20px;
+      @media screen and ($width-name: $target-width) {
+        margin-top: 100px;
+      }
       .title-template {
         background: url("~assets/images/art-title.svg");
         background-repeat: no-repeat;
@@ -533,6 +652,10 @@ $target-width: 675px;
         align-items: center;
         justify-content: center;
 
+        @media screen and ($width-name: $target-width) {
+          background-size: contain;
+        }
+
         h1 {
           position: relative;
           top: 5%;
@@ -540,6 +663,10 @@ $target-width: 675px;
           font-weight: 600;
           color: #ffffff;
           font-family: "Nunito", sans-serif;
+          @media screen and ($width-name: $target-width) {
+            font-size: 14px;
+            top: 4%;
+          }
           span {
             font-weight: 300;
           }
@@ -549,6 +676,15 @@ $target-width: 675px;
       .template-content {
         text-align: left;
         padding-top: 30px;
+        @media screen and ($width-name: $target-width) {
+          padding-top: 50px;
+        }
+
+        img {
+          @media screen and ($width-name: $target-width) {
+            width: 50%;
+          }
+        }
         h1 {
           font-size: 18px;
           color: #1e2127;
@@ -576,6 +712,16 @@ $target-width: 675px;
           margin-top: 50px;
           .platform {
             margin-right: 30px;
+
+            @media screen and ($width-name: $target-width) {
+              margin-right: 10px;
+            }
+
+            img {
+              @media screen and ($width-name: $target-width) {
+                width: 70%;
+              }
+            }
           }
         }
       }
@@ -587,8 +733,17 @@ $target-width: 675px;
         flex-direction: row;
         margin-top: 150px;
 
+        @media screen and ($width-name: $target-width) {
+          flex-direction: column-reverse;
+          margin-top: 50px;
+        }
+
         .template-header-wrap {
           flex: 1;
+
+          @media screen and ($width-name: $target-width) {
+            width: 100%;
+          }
         }
       }
     }

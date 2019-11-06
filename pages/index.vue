@@ -19,7 +19,7 @@
               <a href="#">About Me</a>
             </li>
             <li>
-              <a href="#">Products</a>
+              <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
               <a href="#">Contact</a>
@@ -364,13 +364,13 @@
         <div class="navigation">
           <ul v-if="isNavTitle" class="tabs">
             <li>
-              <a href="#">Home</a>
+              <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li>
               <a href="#">About Me</a>
             </li>
             <li>
-              <a href="#">Portofolio</a>
+              <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
               <a href="#">Contact</a>
@@ -378,10 +378,10 @@
           </ul>
           <ul v-else class="tabs">
             <li>
-              <a href="#">Why Me?</a>
+              <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li>
-              <a href="#">Portofolio</a>
+              <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
               <a href="#">Contact</a>
