@@ -16,13 +16,16 @@
           </div>
           <ul class="tabs">
             <li>
-              <a href="#">About Me</a>
+              <nuxt-link to="/empty">About Me</nuxt-link>
             </li>
             <li>
               <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <nuxt-link to="/empty">Blogs</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/empty">Contact</nuxt-link>
             </li>
           </ul>
         </div>
@@ -32,10 +35,10 @@
               <a href="#">IN</a>
             </li>
             <li>
-              <a href="#">IG</a>
+              <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
             </li>
             <li>
-              <a href="#">FB</a>
+              <a href="https://www.facebook.com/profile.php?id=100008872393804" target="_blank">FB</a>
             </li>
           </ul>
         </div>
@@ -56,9 +59,9 @@
             </div>
             <div class="bottom">
               <div class="btn-content">
-                <a href="#" class="active-button">HIRE ME</a>
+                <a href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!" target="_blank" class="active-button">HIRE ME</a>
               </div>
-              <div class="btn-content">Contact Me</div>
+              <div class="btn-content"><a href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!" target="_blank">Contact Me</a></div>
             </div>
           </div>
         </div>
@@ -367,13 +370,13 @@
               <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li>
-              <a href="#">About Me</a>
+              <nuxt-link to="/empty">About Me</nuxt-link>
             </li>
             <li>
               <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <nuxt-link to="/empty">Contact</nuxt-link>
             </li>
           </ul>
           <ul v-else class="tabs">
@@ -384,7 +387,7 @@
               <nuxt-link to="/product">Products</nuxt-link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <nuxt-link to="/empty">Contact</nuxt-link>
             </li>
           </ul>
         </div>
@@ -394,10 +397,10 @@
               <a href="#">IN</a>
             </li>
             <li>
-              <a href="#">IG</a>
+              <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
             </li>
             <li>
-              <a href="#">FB</a>
+              <a href="https://www.facebook.com/profile.php?id=100008872393804" target="_blank">FB</a>
             </li>
           </ul>
         </div>
@@ -451,6 +454,8 @@ export default {
 
 $width-name: max-device-width;
 $target-width: 675px;
+
+
 
 .container {
   #hero-section {
@@ -565,7 +570,7 @@ $target-width: 675px;
         }
 
         ul.social {
-          margin-left: -30px;
+          margin-left: -100px;
 
           @media screen and ($width-name: $target-width) {
             margin-left: 0;
@@ -727,6 +732,11 @@ $target-width: 675px;
           }
           .btn-content {
             margin-right: 50px;
+
+            a{
+              color: #64637b;
+              text-decoration: none;
+            }
             @media screen and ($width-name: $target-width) {
               color: #ffffff;
               font-family: "Nunito", sans-serif;

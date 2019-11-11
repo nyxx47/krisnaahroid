@@ -10,13 +10,13 @@
         <div class="social">
           <ul class="social">
             <li>
-              <a href="#">IN</a>
+              <nuxt-link to="/">IN</nuxt-link>
             </li>
             <li>
-              <a href="#">IG</a>
+              <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
             </li>
             <li>
-              <a href="#">FB</a>
+              <nuxt-link to="/">FB</nuxt-link>
             </li>
           </ul>
         </div>
@@ -210,10 +210,10 @@
                 <a href="#">IN</a>
               </li>
               <li>
-                <a href="#">IG</a>
+                <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
               </li>
               <li>
-                <a href="#">FB</a>
+                <a href="https://www.facebook.com/profile.php?id=100008872393804" target="_blank">FB</a>
               </li>
             </ul>
           </div>
