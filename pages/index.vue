@@ -25,14 +25,14 @@
               <nuxt-link to="/empty">Blogs</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/empty">Contact</nuxt-link>
+              <a href="https://api.whatsapp.com/send?phone=6283148656290&text=Hi,%20Krisna%20Ahroid!" target="_blank">Contact</a>
             </li>
           </ul>
         </div>
         <div class="content">
           <ul class="social">
             <li>
-              <a href="#">IN</a>
+              <a href="https://www.linkedin.com/in/ahroidlife/" target="_blank">IN</a>
             </li>
             <li>
               <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
@@ -394,7 +394,7 @@
         <div class="socials">
           <ul class="social">
             <li>
-              <a href="#">IN</a>
+              <a href="https://www.linkedin.com/in/ahroidlife/" target="_blank">IN</a>
             </li>
             <li>
               <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>

@@ -10,13 +10,13 @@
         <div class="social">
           <ul class="social">
             <li>
-              <nuxt-link to="/">IN</nuxt-link>
+              <a href="https://www.linkedin.com/in/ahroidlife/" target="_blank">IN</a>
             </li>
             <li>
               <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
             </li>
             <li>
-              <nuxt-link to="/">FB</nuxt-link>
+              <a href="https://www.facebook.com/profile.php?id=100008872393804" target="_blank">FB</a>
             </li>
           </ul>
         </div>
@@ -207,7 +207,7 @@
           <div class="socials">
             <ul class="social">
               <li>
-                <a href="#">IN</a>
+                <a href="https://www.linkedin.com/in/ahroidlife/" target="_blank">IN</a>
               </li>
               <li>
                 <a href="https://www.instagram.com/user.ahroidlife/" target="_blank">IG</a>
