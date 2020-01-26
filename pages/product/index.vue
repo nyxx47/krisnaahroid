@@ -116,6 +116,64 @@
           </div>
         </div>
       </div>
+
+      <div class="section-highlight">
+        <div class="title-wrapper">
+          <h4>PREVIEW</h4>
+          <h1>Full Interaction in each Design</h1>
+        </div>
+      </div>
+
+      <div class="section-intro">
+        <div class="intro-wrapper">
+          <div class="intro-item video-item">
+            <vue-plyr ref="plyr">
+              <video loop controlss>
+                <source src="~assets/videos/ForgotPasswordOverview.mp4" type="video/mp4">
+              </video>
+            </vue-plyr>
+            <div class="title-video">
+              <h2>Forgot Password</h2>
+            </div>
+          </div>
+          <div class="intro-item video-item">
+            <vue-plyr ref="plyr">
+              <video loop controlss>
+                <source src="~assets/videos/AddToCartOverview.mp4" type="video/mp4">
+              </video>
+            </vue-plyr>
+            <div class="title-video">
+              <h2>Add to Cart</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-intro" id="overide-preview">
+        <div class="intro-wrapper">
+          <div class="intro-item video-item">
+            <vue-plyr ref="plyr">
+              <video loop controlss>
+                <source src="~assets/videos/MainScreen.mp4" type="video/mp4">
+              </video>
+            </vue-plyr>
+            <div class="title-video">
+              <h2>Menu, Profile & Collections</h2>
+            </div>
+          </div>
+          <div class="intro-item video-item">
+            <vue-plyr ref="plyr">
+              <video loop controlss>
+                <source src="~assets/videos/AddToCartOverview.mp4" type="video/mp4">
+              </video>
+            </vue-plyr>
+            <div class="title-video">
+              <h2>Add to Cart</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="section-template-app">
         <div class="title-template">
           <h1>
@@ -143,8 +201,8 @@
             </div>
           </div>
           <div class="template-header-wrap">
-            <vue-plyr>
-              <div data-plyr-provider="youtube" :data-plyr-embed-id="videoID"></div>
+            <vue-plyr controlshidden>
+              <div data-plyr-provider="youtube"  :data-plyr-embed-id="videoID"></div>
             </vue-plyr>
           </div>
         </div>
@@ -249,7 +307,13 @@ export default {
   },
   components: {},
   methods: {},
+  computed:{
+    player () {
+      return this.$refs.plyr.player
+    }
+  },
   mounted() {
+    console.log(this.player)
     let screenWidth = window.innerWidth;
     console.log("Screen width is ", screenWidth);
 
@@ -543,6 +607,10 @@ $target-width: 675px;
         }
       }
     }
+    #overide-preview{
+      margin-top: 50px;
+      margin-bottom: 200px;
+    }
     .section-intro {
       position: relative;
       margin-top: 200px;
@@ -646,6 +714,22 @@ $target-width: 675px;
               @media screen and ($width-name: $target-width) {
                 display: none;
               }
+            }
+          }
+        }
+
+        .video-item{
+          padding: 20px;
+
+          .title-video{
+            text-align: center;
+
+            h2{
+              font-size: 18px;
+              color: #1e2127;
+              font-weight: 600;
+              font-family: "Nunito", sans-serif;
+              margin-top: 20px;
             }
           }
         }

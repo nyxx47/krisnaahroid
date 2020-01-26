@@ -15,6 +15,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "lottie-vuejs": "^0.3.7",
     "nuxt": "^2.0.0",
+    "plyr": "^3.5.6",
     "vue-carousel": "^0.18.0",
     "vue-lottie-ssr": "git+https://github.com/serzz1990/vue-lottie.git",
     "vue-plyr": "^5.1.3"
