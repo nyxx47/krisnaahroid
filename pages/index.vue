@@ -108,6 +108,11 @@
             </slide>
             <slide>
               <div class="image">
+                <img src="~assets/images/protopie.png" alt="adobe xd" />
+              </div>
+            </slide>
+            <slide>
+              <div class="image">
                 <img src="~assets/images/invision.svg" alt="invinsion" />
               </div>
             </slide>

@@ -46,10 +46,10 @@
         </div>
         <div class="pricing">
           <div class="price">
-            <strong>$75</strong>
+            <strong>$72</strong>
           </div>
           <div class="price">
-            <p>$82</p>
+            <p>$85</p>
           </div>
         </div>
       </div>
