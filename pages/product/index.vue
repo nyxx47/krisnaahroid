@@ -163,11 +163,11 @@
           <div class="intro-item video-item">
             <vue-plyr ref="plyr">
               <video loop controlss>
-                <source src="~assets/videos/AddToCartOverview.mp4" type="video/mp4">
+                <source src="~assets/videos/SplashOverview.mp4" type="video/mp4">
               </video>
             </vue-plyr>
             <div class="title-video">
-              <h2>Add to Cart</h2>
+              <h2>Splash, On Boarding, and Registratio</h2>
             </div>
           </div>
         </div>
